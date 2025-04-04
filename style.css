@@ -240,44 +240,13 @@ a {
   box-shadow: 0 9.5px 12.7px 0 rgba(0, 0, 0, 0.05);
 }
 
-/*.container {
+.container {
   width: 400px;
   height: 570px;
   background-color: white;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   margin: 50px auto;
-}*/
-
-.container {
-  width: 400px;
-  height: 570px;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  margin: auto; /* Centers properly */
-  position: relative; /* Ensures it's within the viewport */
-  top: 20px; /* Adds slight spacing from the top */
-}
-
-.captionBot {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 0 10px;
-  font-size: 14px;
-  font-weight: 600;
-  color: rgb(24, 25, 25);
-  white-space: nowrap;
-}
-
-.captionBot img {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
 }
 
 .InputMSG:valid ~ .send-icon svg path {
@@ -326,4 +295,22 @@ a {
     right: 0;
     background-color: white;
   }
+}
+
+
+.captionBot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(24, 25, 25);
+  white-space: nowrap;
+}
+
+.captionBot img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
