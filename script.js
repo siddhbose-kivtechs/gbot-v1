@@ -38,6 +38,29 @@ let status_func_SendMsgBot = 0;
 //         SendMsgToServer(userMessage);
 //     }
 // }
+// function SendMsgUser() {
+//     if (input.value.trim() !== "" && status_func_SendMsgBot === 0) {
+//         const userMessage = input.value.trim();
+//         const timeNow = new Date().toLocaleTimeString();
+
+//         const userMsgElement = document.createElement("div");
+//         userMsgElement.classList.add("massage", "msgCaption");
+//         userMsgElement.setAttribute("data-user", "true");
+//         userMsgElement.innerHTML = `
+//             <span class="captionUser">You</span>
+//             <div class="user-response">
+//                 ${userMessage}
+//                 <div class="time-stamp user-time">${timeNow}</div>
+//             </div>
+//         `;
+//         ContentChat.appendChild(userMsgElement);
+//         userMsgElement.scrollIntoView();
+
+//         input.value = "";
+//         SendMsgToServer(userMessage);
+//     }
+// }
+
 function SendMsgUser() {
     if (input.value.trim() !== "" && status_func_SendMsgBot === 0) {
         const userMessage = input.value.trim();
@@ -46,12 +69,11 @@ function SendMsgUser() {
         const userMsgElement = document.createElement("div");
         userMsgElement.classList.add("massage", "msgCaption");
         userMsgElement.setAttribute("data-user", "true");
+
+        const formattedUserText = `🧑 You\n\n${userMessage}\n\n${timeNow}`;
+
         userMsgElement.innerHTML = `
-            <span class="captionUser">You</span>
-            <div class="user-response">
-                ${userMessage}
-                <div class="time-stamp user-time">${timeNow}</div>
-            </div>
+            <div class="user-response">${formattedUserText}</div>
         `;
         ContentChat.appendChild(userMsgElement);
         userMsgElement.scrollIntoView();
@@ -60,7 +82,6 @@ function SendMsgUser() {
         SendMsgToServer(userMessage);
     }
 }
-
 
 // Function to Send Message to Server
 function SendMsgToServer(msg) {
