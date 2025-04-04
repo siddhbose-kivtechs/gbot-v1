@@ -183,3 +183,14 @@ function sendInitialGreeting() {
 
 // Send Initial Greeting After 2 Seconds
 setTimeout(sendInitialGreeting, 2000);
+
+
+
+// Update footer branding
+const bySpan = document.querySelector(".by");
+if (bySpan) {
+    bySpan.innerHTML = `
+        <span>Powered by</span>
+        <a target="_blank" href="#" style="color: #ff80ab; text-shadow: 0 0 2px #8e24aa"> Google - Gemini</a>
+    `;
+}
